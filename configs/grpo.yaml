@@ -1,0 +1,25 @@
+base_model: outputs/sft/merged
+init_adapter: outputs/sft/adapter
+pool_file: outputs/data/grpo_pool.json
+dev_file: outputs/data/grpo_dev150.json
+data_root: data/omnisql
+output_dir: outputs/grpo
+
+max_prompt_length: 8192
+max_completion_length: 2048
+vllm_max_model_length: 10240
+lr: 5.0e-6
+warmup_steps: 10
+batch_size: 1
+grad_accum: 64
+num_generations: 8
+generation_batch_size: 128
+temperature: 1.0
+beta: 0.0
+epochs: 1
+dev_eval_steps: 50
+patience: 2
+timeout: 15
+gpu_memory_utilization: 0.4
+step_offset: 0
+seed: 43

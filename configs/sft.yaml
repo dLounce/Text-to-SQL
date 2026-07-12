@@ -1,0 +1,17 @@
+base_model: Qwen/Qwen2.5-Coder-7B
+train_file: outputs/data/sft_train.json
+val_file: outputs/data/sft_val.json
+output_dir: outputs/sft
+adapter_dir: outputs/sft/adapter
+merged_dir: outputs/sft/merged
+
+max_length: 10240
+lora_r: 16
+lora_alpha: 32
+epochs: 2
+lr: 1.0e-4
+warmup_ratio: 0.03
+batch_size: 8
+grad_accum: 2
+eval_steps: 100
+seed: 42

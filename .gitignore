@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+venv/
+.env
+
+/data/
+databases/
+*.sqlite
+*.jsonl
+
+outputs/
+checkpoints/
+*.safetensors
+results/preds/
+*.egg-info/

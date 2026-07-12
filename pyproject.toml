@@ -1,0 +1,10 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "text2sql-rlvr"
+version = "0.1.0"
+
+[tool.setuptools.packages.find]
+include = ["src*"]
