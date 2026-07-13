@@ -43,7 +43,7 @@ order is ignored unless the gold query has an ORDER BY.
 
 The training pool keeps only prompts where the SFT model was neither
 always right nor always wrong across 8 samples at temperature 1.0.
-Training runs for 1 epochs. A fixed set of 150 dev examples is scored
+Training runs for 1 epoch. A fixed set of 150 dev examples is scored
 every 50 steps and training stops after two checks without
 improvement. The best and last adapters are saved. To resume a run,
 point init_adapter at outputs/grpo/lora_best and set step_offset in
