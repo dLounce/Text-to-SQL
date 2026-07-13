@@ -13,7 +13,7 @@ databases that never appear in training.
 |----------|---------|------|--------|
 | Base     | 50.6    | 38.1 | 67.1   |
 | SFT      | 66.6    | 53.1 | 84.3   |
-| SFT+GRPO | 71.3   | 56.7 | 85.9   |
+| SFT+GRPO | 68.4    | 55.1 | 85.9   |
 
 ## Data
 
@@ -43,7 +43,7 @@ order is ignored unless the gold query has an ORDER BY.
 
 The training pool keeps only prompts where the SFT model was neither
 always right nor always wrong across 8 samples at temperature 1.0.
-Training runs for 2 epochs. A fixed set of 150 dev examples is scored
+Training runs for 1 epochs. A fixed set of 150 dev examples is scored
 every 50 steps and training stops after two checks without
 improvement. The best and last adapters are saved. To resume a run,
 point init_adapter at outputs/grpo/lora_best and set step_offset in
